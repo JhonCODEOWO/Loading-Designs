@@ -10,6 +10,14 @@
     }
 }
 
+@keyframes desvanecer {
+    0%{
+        opacity: 0;
+    }100%{
+        opacity: 1;
+    }
+}
+
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
     font-size: 62.5%;
@@ -55,7 +63,7 @@ h4{
     font-size: 1.8rem;
 }
 
-p {
+p, li {
     font-weight: 200;
     font-size: 2.2rem;
 }
@@ -92,6 +100,9 @@ a {
     background-color: red;
 }
 
+.content-gral{
+    display: none;
+}
 
 /* Componentes principales de la pagina */
 .container {
@@ -253,4 +264,25 @@ a {
     background-color: transparent;
     height: 100%;
     z-index: 2;
+}
+
+.img-loader{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.img-loader .img-loader-icon{
+    text-align: center;
+}
+
+.img-loader .img-loader-icon img{
+    width: 50%;
+}
+
+.img-loader .img-loader-text{
+    width: 100%;
+    font-weight: bold;
+    font-size: 4rem;
+    text-align: center;
+    animation: desvanecer .7s ease-in infinite;
 }
